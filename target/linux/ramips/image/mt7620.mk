@@ -1248,6 +1248,17 @@ define Device/xiaomi_miwifi-mini
 endef
 TARGET_DEVICES += xiaomi_miwifi-mini
 
+define Device/dsbox_dsr1
+  SOC := mt7620a
+  IMAGE_SIZE := 32448k
+  DEVICE_VENDOR := DSbox
+  DEVICE_MODEL := DSR1
+  DEVICE_PACKAGES := kmod-mt76x2 kmod-usb2 kmod-usb-ohci kmod-sdhci-mt7620 \
+  kmod-usb-ledtrig-usbport
+  SUPPORTED_DEVICES += dsbox-dsr1
+endef
+TARGET_DEVICES += dsbox_dsr1
+
 define Device/youku_yk-l1
   SOC := mt7620a
   IMAGE_SIZE := 32448k
